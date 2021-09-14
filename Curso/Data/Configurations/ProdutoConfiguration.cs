@@ -8,7 +8,7 @@ namespace Curso.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Produto> builder)
         {
-            builder.ToTable("Pedidos");
+            builder.ToTable("Produtos");
             builder.HasKey(p => p.Id);
 
             builder.Property(p => p.CodigoBarras).HasColumnType("VARCHAR(14)").IsRequired();
