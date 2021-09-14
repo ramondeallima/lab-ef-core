@@ -21,7 +21,7 @@ namespace CursoEFCore.Data.Configurations
             builder.Property(p => p.Estado).HasMaxLength(60).IsRequired();
 
             // Índice para otimizar buscas em campos que são muito utilizados para esse fim.
-            builder.Property(i => i.Telefone).HasColumnName("idx_cliente_telefone");
+            builder.HasIndex(i => i.Telefone).HasName("idx_cliente_telefone");
         }
     }
 }
